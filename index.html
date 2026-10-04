@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Misato Nakamura</title>
+
+  <!-- Fonts: elegant serif for headings, clean sans-serif for body text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #2b2b2b;
+      --muted: #777777;
+      --accent: #8a6d3b;
+      --line: #dddddd;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Lato", sans-serif;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 80px 24px;
+    }
+
+    section {
+      padding: 48px 0;
+    }
+
+    /* Thin divider lines between the sections */
+    section + section {
+      border-top: 1px solid var(--line);
+    }
+
+    h1 {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 600;
+      font-size: 3.5rem;
+      line-height: 1.1;
+      letter-spacing: 0.5px;
+    }
+
+    h2 {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 500;
+      font-size: 2rem;
+      margin-bottom: 16px;
+    }
+
+    .label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .focus {
+      margin-top: 16px;
+      font-size: 0.95rem;
+      letter-spacing: 1px;
+      color: var(--muted);
+    }
+
+    .interests {
+      list-style: none;
+      counter-reset: item;
+    }
+
+    .interests li {
+      counter-increment: item;
+      position: relative;
+      padding-left: 48px;
+    }
+
+    .interests li + li {
+      margin-top: 28px;
+    }
+
+    /* Serif numerals as list markers */
+    .interests li::before {
+      content: counter(item, decimal-leading-zero);
+      position: absolute;
+      left: 0;
+      top: -2px;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.6rem;
+      color: var(--accent);
+    }
+
+    h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 600;
+      font-size: 1.4rem;
+      margin-bottom: 4px;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+
+    /* Research question shown under the project heading */
+    .question {
+      margin-bottom: 32px;
+      font-family: "Cormorant Garamond", serif;
+      font-style: italic;
+      font-size: 1.3rem;
+      line-height: 1.5;
+      color: var(--muted);
+    }
+
+    p + p {
+      margin-top: 16px;
+    }
+
+    footer {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 32px 24px 48px;
+      border-top: 1px solid var(--line);
+      text-align: center;
+      font-size: 0.85rem;
+      letter-spacing: 0.5px;
+      color: var(--muted);
+    }
+
+    footer p + p {
+      margin-top: 4px;
+    }
+
+    @media (max-width: 600px) {
+      main { padding: 48px 16px; }
+      footer { padding: 24px 16px 40px; }
+      h1 { font-size: 2.6rem; }
+      h2 { font-size: 1.7rem; }
+      body { font-size: 17px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+
+    <!-- Section 1: Name -->
+    <section>
+      <span class="label">Hello, I'm</span>
+      <h1>Misato Nakamura</h1>
+      <p class="focus">Interests: AI, Cyber &amp; National Security; Impacts of AI-Generated Content on the Content Industry</p>
+    </section>
+
+    <!-- Section 2: About -->
+    <section>
+      <span class="label">About</span>
+      <h2>About Me</h2>
+      <p>
+        I am a second-year Master's student in International Policy. I grew up in Tokyo, Japan.
+      </p>
+      <p>
+        At Stanford, I have taken a Comparative AI Regulations class and data science classes using R. I am taking an AI &amp; Politics class in order to understand how AI technologies impact society and what the ideal balance between regulation and innovation is.
+      </p>
+    </section>
+
+    <!-- Section 3: Project interests (research question + class project idea) -->
+    <section>
+      <span class="label">Project Interests</span>
+      <h2>Voice Actors and Voice Cloning by Generative AI</h2>
+      <p class="question">
+        How is Japan addressing the harms to voice actors from generative AI voice cloning, and whom do they hold responsible?
+      </p>
+      <ol class="interests">
+        <li>
+          <h3>Recent Court Ruling in Japan</h3>
+          <p>
+            <a href="https://apnews.com/article/japan-anime-voice-actor-ai-a2a9596a197f149398771a9166043ef9" target="_blank" rel="noopener noreferrer">AP News: Japan anime voice actors and AI</a>
+          </p>
+        </li>
+        <li>
+          <h3>Japanese Government's Interpretation of Publicity Rights</h3>
+        </li>
+        <li>
+          <h3>Other Jurisdictions' Examples</h3>
+        </li>
+      </ol>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Built with Claude Code.</p>
+    <p>Text Written by Misato Nakamura</p>
+    <p>Last Updated: October 4, 2026</p>
+  </footer>
+</body>
+</html>
